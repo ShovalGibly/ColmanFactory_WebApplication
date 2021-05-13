@@ -2,15 +2,17 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using WebApplication_ColmanFactory.Data;
 
 namespace WebApplication_ColmanFactory.Migrations
 {
     [DbContext(typeof(WebApplication_ColmanFactoryContext))]
-    partial class WebApplication_ColmanFactoryContextModelSnapshot : ModelSnapshot
+    [Migration("20210513190913_setPassword")]
+    partial class setPassword
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

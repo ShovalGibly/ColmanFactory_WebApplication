@@ -19,5 +19,6 @@ namespace WebApplication_ColmanFactory.Data
         public DbSet<WebApplication_ColmanFactory.Models.Category> Category { get; set; }
 
         public DbSet<WebApplication_ColmanFactory.Models.User> User { get; set; }
+
     }
 }

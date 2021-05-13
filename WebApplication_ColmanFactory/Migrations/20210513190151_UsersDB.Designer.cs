@@ -2,15 +2,17 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using WebApplication_ColmanFactory.Data;
 
 namespace WebApplication_ColmanFactory.Migrations
 {
     [DbContext(typeof(WebApplication_ColmanFactoryContext))]
-    partial class WebApplication_ColmanFactoryContextModelSnapshot : ModelSnapshot
+    [Migration("20210513190151_UsersDB")]
+    partial class UsersDB
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -86,7 +88,6 @@ namespace WebApplication_ColmanFactory.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Password")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("PhoneNumber")
@@ -96,7 +97,6 @@ namespace WebApplication_ColmanFactory.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("UserName")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("UserID");
