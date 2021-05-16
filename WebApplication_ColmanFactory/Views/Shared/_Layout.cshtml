@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - WebApplication_ColmanFactory</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
     <link rel="stylesheet" href="~/css/site.css" />
 </head>
 <body>
@@ -18,36 +20,52 @@
                 </button>
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
+                        <li class="nav-item gender-type">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Women</a>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item gender-type">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Men</a>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item gender-type">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Kids</a>
                         </li>
 
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Search</a>
+                        <li class="nav-item ml-auto"> 
+                            <a class="nav-link text-dark " asp-area="" asp-controller="Home" asp-action="Privacy">
+                                <i class="fas fa-search"></i>
+                                Search
+                            </a>
                         </li>
                         @if (Context.User != null && Context.User.Claims != null && Context.User.Claims.Count() > 0)
                         {
                             <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="" asp-controller="Users" asp-action="Logout">Logout</a>
+
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Users" asp-action="Logout">
+                                    <i class="far fa-user"></i>
+                                    Logout
+                                </a>
                             </li>
                         }
                         else
                         {
                             <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="" asp-controller="Users" asp-action="Login">Login</a>
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Users" asp-action="Login">
+                                    <i class="far fa-user"></i>
+                                    Login
+                                </a>
                             </li>
                         }
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Wishlist</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">
+                                <i class="far fa-heart"></i>
+                                Wishlist
+                            </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Shopping bag</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">
+                                <i class="fas fa-shopping-bag"></i>
+                                Cart
+                            </a>
                         </li>
                     </ul>
                 </div>
